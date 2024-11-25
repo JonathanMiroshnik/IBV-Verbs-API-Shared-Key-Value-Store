@@ -1884,7 +1884,6 @@ int breakup_string_msg_client(char *msg, struct kv_handle *kv_handle_struct, cha
 
 
 // Like pp_wait_completions but takes into account whether it is a Server or a Client
-// For Exercise 3
 int pp_wait_completions_split(void* kv_handle, int iters, const char* servername, char* request,
                               char** value, int num_of_connections)
 {
@@ -2448,7 +2447,7 @@ int process_txt_file(char* file_name, void* kv_handle) {
     return 0;
 }
 
-// This is part of our Exercise 2 code:
+
 double calculate_throughput(struct timeval start_time, struct timeval end_time, int data_size_bytes, int iters) {
     int MEGABYTE = (1024 * 1024)/8;
     int MICROSECS_IN_SEC = 1000000;
@@ -2912,7 +2911,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    // OUR CODE STARTS FROM HERE -------------------------------------------------------------------------------
+    // ---------------------------- New Key-Value Store code starts from here --------------------------------------
     // Initializing static variables
     init_kv_store();
 
@@ -2943,6 +2942,7 @@ int main(int argc, char *argv[])
     if (servername) {
         kv_open(servername,data);
     }
+
     // Connecting to each Client on the Server, the Server awaits until N_CLIENTS have connected
     else {
         ctx_pairs = malloc(N_CLIENTS * sizeof(struct ctx_pair));
