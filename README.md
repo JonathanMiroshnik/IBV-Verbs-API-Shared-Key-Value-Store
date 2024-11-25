@@ -37,3 +37,9 @@ PRINT_MSGS in the bw_template.c file can be set to either boolean value to print
 If it left as false, you will still be able to print the Key-Value store and be shown them.
 
 The Client1.txt and Client2.txt are examples of files that can be used in the "file" mode by a Client.
+
+To compile the code with GCC:
+?? ADD THIS ??
+'''
+gcc bw_template 
+'''
