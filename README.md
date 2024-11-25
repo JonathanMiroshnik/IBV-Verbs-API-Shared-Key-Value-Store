@@ -20,9 +20,6 @@ There are 3 avaliable modes of operation to access the Key-Value store on the Se
 To access one of these modes, after starting up a Client and connecting it to the Server, you must write the name of the mode.
 Different Clients may use different modes at the same time.
 
-PRINT_MSGS in the bw_template.c file can be set to either boolean value to print all the exact messages that are sent between the Server and Clients in the operation of the system.
-If it left as false, you will still be able to print the Key-Value store and be shown them.
-
 ## Avaliable commands:
 The commands that a client can send out are as follows:
 1. set key value - sends the key and the value to be saved in the Server as given.
@@ -34,3 +31,9 @@ The commands that a client can send out are as follows:
     In the event that the key and value pair is larger than MAX_KEY_SIZE as described above, we transfer the value with an IBV RDMA Read request.
 4. printkv - prints out the Key-Value stores of the Client and Server.
 5. warmup - sends a small parcel of data without prints to create a warmup effect for the hardware.
+
+## Additional information:
+PRINT_MSGS in the bw_template.c file can be set to either boolean value to print all the exact messages that are sent between the Server and Clients in the operation of the system.
+If it left as false, you will still be able to print the Key-Value store and be shown them.
+
+The Client1.txt and Client2.txt are examples of files that can be used in the "file" mode by a Client.
