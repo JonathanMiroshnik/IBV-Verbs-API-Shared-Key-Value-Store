@@ -39,7 +39,6 @@ If it left as false, you will still be able to print the Key-Value store and be 
 The Client1.txt and Client2.txt are examples of files that can be used in the "file" mode by a Client.
 
 To compile the code with GCC:
-?? ADD THIS ??
 '''
-gcc bw_template 
+gcc bw_template.c linkedlist_pairs.c -libverbs -o server && ln -s server client 
 '''
